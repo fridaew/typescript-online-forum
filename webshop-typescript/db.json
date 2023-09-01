@@ -2,13 +2,16 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "",
+      "author": "",
+      "category": "",
+      "creationDate": "",
+      "description": ""
     },
     {
       "posts": [
         {
-          "id": 2,
+          "id": 1,
           "title": "json-server",
           "author": "typicode"
         }
@@ -20,15 +23,14 @@
           "postId": 1
         }
       ],
-      "profile": {
-        "name": "typicode"
-      },
       "id": 2
     },
+
+
     {
       "posts": [
         {
-          "id": 2,
+          "id": 1,
           "title": "json-server",
           "author": "typicode"
         }
@@ -40,17 +42,17 @@
           "postId": 1
         }
       ],
-      "profile": {
-        "name": "typicode"
-      },
       "id": 3
     },
     {
       "posts": [
         {
-          "id": 2,
+          "id": 1,
           "title": "json-server",
-          "author": "typicode"
+          "author": "typicode",
+          "category": "hehj",
+          "creationDate": "gfgf",
+          "description": "gfgfg"
         }
       ],
       "comments": [
@@ -60,9 +62,6 @@
           "postId": 1
         }
       ],
-      "profile": {
-        "name": "typicode"
-      },
       "id": 4
     }
   ],
@@ -72,8 +71,5 @@
       "body": "some comment",
       "postId": 1
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
