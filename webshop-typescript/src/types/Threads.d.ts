@@ -2,7 +2,7 @@
 type ThreadCategory = "THREAD" | "QNA"
 
 interface Thread {
-  id: number;
+    id: number;
 	title: string;
 	category: ThreadCategory;
 	creationDate: string;
