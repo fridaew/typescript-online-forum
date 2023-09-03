@@ -1,7 +1,28 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ThreadCreationView from './ThreadCreationView'
 
 const ThreadListView = () => {
-  return (
+
+  const [data, setData] = useState([])
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get('http://localhost:8080/posts');
+      setData(res.data)
+      console.log(res.data);
+    } catch (error) {
+      console.log('Error when fetching data: ', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return <div>
+    
+    <ThreadCreationView/>
     <div className="thread-wrapper d-flex justify-content-center">
       <div className="card w-75 mb-3">
         <div className="card-body">
@@ -10,7 +31,7 @@ const ThreadListView = () => {
         </div>
       </div>
     </div>
-  )
-}
+  </div>;
+};
 
-export default ThreadListView
+export default ThreadListView;
