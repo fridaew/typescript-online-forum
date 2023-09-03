@@ -21,11 +21,12 @@ function ThreadCreationView() {
               <form>
                 <div className="mb-3">
                   <label htmlFor="recipient-name" className="col-form-label">Choose the type of your thread:</label>
-                  <select className="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
+                  <select className="form-select" aria-label="Default select example" defaultValue="">
+                    <option value="">Open this select menu</option>
                     <option value="1">Thread</option>
                     <option value="2">Q&A</option>
                   </select>
+
                 </div>
                 <div className="mb-3">
                   <label htmlFor="recipient-name" className="col-form-label">Title:</label>
