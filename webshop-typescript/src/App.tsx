@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Webshop</h1>
-      <p>Hello</p>
+      <p>Hello2</p>
       <ThreadListView />
       </div>
   );
