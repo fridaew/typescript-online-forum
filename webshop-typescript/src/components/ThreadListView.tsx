@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import ThreadCreationView from './ThreadCreationView'
 
 const ThreadListView = () => {
 
@@ -20,6 +21,8 @@ const ThreadListView = () => {
   }, []);
 
   return <div>
+    
+    <ThreadCreationView/>
     <div className="thread-wrapper d-flex justify-content-center">
       <div className="card w-75 mb-3">
         <div className="card-body">
