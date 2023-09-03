@@ -1,68 +1,20 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "",
-      "author": "",
-      "category": "",
-      "creationDate": "",
-      "description": ""
-    },
-    {
-      "posts": [
-        {
-          "id": 1,
-          "title": "json-server",
-          "author": "typicode"
-        }
-      ],
-      "comments": [
-        {
-          "id": 1,
-          "body": "some comment",
-          "postId": 1
-        }
-      ],
+      "title": "TypeScript course",
+      "category": "Code",
+      "creationDate": "sunday",
+      "description": "TypeScript is really, really fun!",
+      "creator": "Alex",
       "id": 2
     },
-
-
     {
-      "posts": [
-        {
-          "id": 1,
-          "title": "json-server",
-          "author": "typicode"
-        }
-      ],
-      "comments": [
-        {
-          "id": 1,
-          "body": "some comment",
-          "postId": 1
-        }
-      ],
+      "title": "JS Course",
+      "category": "Code",
+      "creationDate": "Mondya",
+      "description": "JS is really, really fun!",
+      "creator": "Krille",
       "id": 3
-    },
-    {
-      "posts": [
-        {
-          "id": 1,
-          "title": "json-server",
-          "author": "typicode",
-          "category": "hehj",
-          "creationDate": "gfgf",
-          "description": "gfgfg"
-        }
-      ],
-      "comments": [
-        {
-          "id": 1,
-          "body": "some comment",
-          "postId": 1
-        }
-      ],
-      "id": 4
     }
   ],
   "comments": [
@@ -70,6 +22,19 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "body": "some comments, some comments",
+      "postId": 1,
+      "id": 2
+    },
+    {
+      "body": "some comments, some comments",
+      "postId": 2,
+      "id": 3
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

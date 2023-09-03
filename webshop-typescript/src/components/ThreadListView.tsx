@@ -8,9 +8,9 @@ const ThreadListView = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/posts');
+      const res = await axios.get('http://localhost:8080/posts');
       setData(res.data)
-      console.log(res);
+      console.log(res.data);
     } catch (error) {
       console.log('Error when fetching data: ', error);
     }
