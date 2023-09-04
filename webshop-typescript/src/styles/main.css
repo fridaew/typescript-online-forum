@@ -1,17 +1,16 @@
-/* .thread-wrapper {
-  display: grid;
-  place-content: center;
-  border: 1px solid;
-} */
-
 .card {
   cursor: pointer;
 }
 
 img {
   width: 100%;
+  object-fit: contain;
 }
 
 .btn {
   background-color: #2B4762;
+}
+
+.btn:hover {
+  background-color: hsl(209, 39%, 48%);
 }

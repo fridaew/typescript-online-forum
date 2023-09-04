@@ -45,8 +45,10 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
+
       {/*<button className='btn'>Comment</button>*/}
       <ThreadCommentsView />
+
     </div>
   );
 };

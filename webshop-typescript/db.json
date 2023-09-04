@@ -54,10 +54,41 @@
     },
     {
       "id": 9,
+
       "title": "Beer",
       "category": "THREAD",
       "creationDate": "2023-09-04T11:50:41.240Z",
       "description": "What is your favorite beer?",
+
+      "title": "Öl",
+      "category": "QNA",
+      "creationDate": "2023-09-04T10:22:25.499Z",
+      "description": "carlsberg är den bästa ölen",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 10,
+      "title": "hjsa",
+      "category": "QNA",
+      "creationDate": "2023-09-04T10:30:54.782Z",
+      "description": "testar igen",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Funkar det?",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:59:47.750Z",
+      "description": "Hoppas det.. :D",
+
       "creator": {
         "id": 1,
         "name": "John Doe",
