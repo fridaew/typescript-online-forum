@@ -3,3 +3,7 @@
   place-content: center;
   border: 1px solid;
 } */
+
+.card {
+  cursor: pointer;
+}
