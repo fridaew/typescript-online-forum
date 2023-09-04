@@ -15,6 +15,42 @@
       "description": "JS is really, really fun!",
       "creator": "Krille",
       "id": 3
+    },
+    {
+      "id": 4,
+      "title": "testar",
+      "category": "QNA",
+      "creationDate": "2023-09-03T11:54:36.779Z",
+      "description": "Testar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 5,
+      "title": "testar2",
+      "category": "THREAD",
+      "creationDate": "2023-09-03T12:00:53.817Z",
+      "description": "Hejsan",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 6,
+      "title": "testar3",
+      "category": "QNA",
+      "creationDate": "2023-09-03T12:43:04.775Z",
+      "description": "hejpådej",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [

@@ -4,7 +4,9 @@ import ThreadCreationView from './ThreadCreationView'
 
 const ThreadListView = () => {
 
-  const [data, setData] = useState([])
+
+  
+  const [data, setData] = useState<Thread[]>([]);
 
   const fetchData = async () => {
     try {
@@ -22,7 +24,8 @@ const ThreadListView = () => {
 
   return <div>
     
-    <ThreadCreationView/>
+    <ThreadCreationView setData={setData}/>
+
     <div className="thread-wrapper d-flex justify-content-center">
       <div className="card w-75 mb-3">
         <div className="card-body">
