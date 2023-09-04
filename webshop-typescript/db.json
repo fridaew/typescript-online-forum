@@ -79,18 +79,6 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
-    },
-    {
-      "id": 12,
-      "title": "Lorem test",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T13:01:35.457Z",
-      "description": "The text within the Link component is underlined by default because it inherits the default link styling. This default styling includes underlining links to indicate that they are clickable.\n\nIf you want to remove the underline from the text within the Link component, you can use CSS to override the default link styles, as mentioned in the previous response. Setting text-decoration: none on the text elements within the Link component will remove the underlines.\n\nIf you are still seeing underlines even after applying the text-decoration: none style, there may be other CSS rules in your project's stylesheets that are affecting the links. In that case, you may need to inspect your project's CSS rules to identify and override any conflicting styles.",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
     }
   ],
   "comments": [

@@ -13,3 +13,12 @@
     font-size: 25px;
     color: aliceblue;
 }
+
+.navlogo-container {
+  width: 15rem;
+}
+
+.navlogo-image {
+  width: 100%;
+  object-fit: cover;
+}
