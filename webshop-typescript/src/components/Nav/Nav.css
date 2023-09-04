@@ -1,12 +1,12 @@
 .navbar{
   display: flex;
-  justify-content: space-around;
-  background-color: rgb(29, 69, 101);
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2B4762;
   padding: 12px;
 }
 
 .nav-menu{
-    margin-left: 800px;
     font-size: 25px;
 }
 .navbar-home{
