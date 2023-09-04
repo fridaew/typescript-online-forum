@@ -1,0 +1,14 @@
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(29, 69, 101);
+  padding: 12px;
+}
+
+.nav-menu{
+    margin-left: 800px;
+    font-size: 25px;
+}
+.navbar-home{
+    font-size: 25px;
+}
