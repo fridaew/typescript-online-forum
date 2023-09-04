@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Nav />
         <div className="App">
-          <img src={logo} alt="Beer Logo" />
+          {/* <img src={logo} alt="Beer Logo" /> */}
           <Routes>
             <Route path="/" element={<ThreadListView />} />
             <Route path="/thread/:id" element={<ThreadDetailsView title='' description='' creator='' category='' />} />

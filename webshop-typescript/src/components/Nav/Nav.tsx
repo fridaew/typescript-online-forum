@@ -7,8 +7,9 @@ import './Nav.css'
 const Nav = () => {
   return (
     <div className='navbar'>
-      <NavLink to='/'><p className='navbar-home'><ImHome/></p></NavLink>     
-        <p className='nav-menu'><GiHamburgerMenu/></p>
+      <NavLink to='/'><p className='navbar-home'><ImHome/></p></NavLink>  
+      <h5>Beer Forum</h5>
+      <p className='nav-menu'><GiHamburgerMenu/></p>
     </div>
   )
 }
