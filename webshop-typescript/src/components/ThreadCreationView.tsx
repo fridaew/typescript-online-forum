@@ -11,11 +11,13 @@ interface ThreadCreationViewProps {
 function ThreadCreationView( { setData }: ThreadCreationViewProps) {
 
  
-  // const currentUser: User = {
-  //   id: 1,
-  //   name: 'John Doe',
-  //   userName: 'johndoe',
-  // };
+  // const currentUser: User = [
+  //   {
+  //     id: 1,
+  //     name: 'John Doe',
+  //     userName: 'johndoe',
+  //   }
+  // ] 
 
   const currentDate: string = new Date().toISOString();
 
@@ -104,9 +106,10 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
 
   return (
     <div>
-      <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+      <div className='thread-btn'>  <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
         NEW THREAD
-      </button>
+      </button></div>
+    
 
       <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">

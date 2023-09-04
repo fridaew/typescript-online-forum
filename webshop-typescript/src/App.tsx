@@ -13,7 +13,7 @@ function App() {
     <>
     
       <Router>
-        <div className="App">
+        <div className="App"> 
           <img src={logo} alt="Beer Logo" />
           <Routes>
             <Route path="/" element={<ThreadListView />} />
