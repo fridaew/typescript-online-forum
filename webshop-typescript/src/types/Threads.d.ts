@@ -11,7 +11,7 @@ interface Thread {
 }
 
 interface QNAThread extends Thread {
-	category: "QNA";
-	isAnswered: boolean;
+	category: "QNA"
+	isAnswered: boolean
 	commentAnswerId?: number
 }

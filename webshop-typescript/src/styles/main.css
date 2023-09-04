@@ -1,15 +1,10 @@
-/* .thread-wrapper {
-  display: grid;
-  place-content: center;
-  border: 1px solid;
-} */
-
 .card {
   cursor: pointer;
 }
 
 img {
   width: 100%;
+  object-fit: contain;
 }
 
 .btn {
@@ -19,4 +14,9 @@ img {
 .thread-btn{
   margin-top: 30px;
   margin-left: 1rem;
+
+}
+.btn:hover {
+
+  background-color: hsl(209, 39%, 48%);
 }
