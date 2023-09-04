@@ -1,9 +1,22 @@
-import React from 'react'
+import { useParams } from "react-router-dom";
 
-const TreadDetailsView = () => {
-  return (
-    <div>TreadDetailsView</div>
-  )
+interface ThreadDetailsProps {
+  title: string;
+  description: string;
 }
 
-export default TreadDetailsView
+const ThreadDetailsView = () => {
+  // const ThreadDetailsView: React.FC<ThreadDetailsProps> = ({ title, description }) => {
+
+const { id } = useParams()
+
+  return (
+    <div>
+      <h5>{id}</h5>
+      {/* <h5>{title}</h5>
+      <p>{description}</p> */}
+    </div>
+  );
+};
+
+export default ThreadDetailsView;
