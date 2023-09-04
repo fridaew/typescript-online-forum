@@ -1,18 +1,10 @@
 {
   "posts": [
     {
-      "title": "TypeScript course",
-      "category": "Code",
-      "creationDate": "sunday",
-      "description": "TypeScript is really, really fun!",
-      "creator": "Alex",
-      "id": 2
-    },
-    {
       "title": "JS Course",
       "category": "THREAD",
-      "creationDate": "Mondya",
-      "description": "JS is really, really fun!",
+      "creationDate": "Monday",
+      "description": "JS is really fun!",
       "creator": "Krille",
       "id": 3
     },
@@ -87,6 +79,18 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 12,
+      "title": "Lorem test",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T13:01:35.457Z",
+      "description": "The text within the Link component is underlined by default because it inherits the default link styling. This default styling includes underlining links to indicate that they are clickable.\n\nIf you want to remove the underline from the text within the Link component, you can use CSS to override the default link styles, as mentioned in the previous response. Setting text-decoration: none on the text elements within the Link component will remove the underlines.\n\nIf you are still seeing underlines even after applying the text-decoration: none style, there may be other CSS rules in your project's stylesheets that are affecting the links. In that case, you may need to inspect your project's CSS rules to identify and override any conflicting styles.",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
@@ -94,19 +98,6 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
-    },
-    {
-      "body": "some comments, some comments",
-      "postId": 1,
-      "id": 2
-    },
-    {
-      "body": "some comments, some comments",
-      "postId": 2,
-      "id": 3
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
