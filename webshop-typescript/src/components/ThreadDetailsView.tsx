@@ -5,19 +5,15 @@ import ThreadCommentsView from './ThreadCommentsView';
 interface ThreadDetailsProps {
   title: string;
   description: string;
-  creator: string;
   category: string;
+  creator: {
+    userName: string;
+  }
 }
 
 const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
-  
-  const [showModal, setShowModal] = useState(false);
-
-  const handleCloseModal = () => setShowModal(false);
-  
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,26 +30,23 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     fetchData();
   }, [id]);
 
-  
-    
-  
-
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
-        <div className="card w-75 mb-3">
+        <div className="card w-50 mb-3">
           <div className='card-body'>
             <div className='d-flex justify-content-between'>
             <h5 className="card-title">{threadData.title}</h5>
             <h5 className='card-title'>{threadData.category}</h5>
             </div>
-            <p className='card-text'>u/{threadData.creator}</p>
+            <p className='card-text'>u/{threadData.creator.userName}</p>
             <p className="card-text">{threadData.description}</p>
+            {/* <p className="card-text">{threadData.description}</p> */}
           </div>
         </div>
       )}
-     
-      <ThreadCommentsView show={showModal} onHide={handleCloseModal} />
+      {/*<button className='btn'>Comment</button>*/}
+      <ThreadCommentsView />
     </div>
   );
 };
