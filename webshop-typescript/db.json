@@ -51,6 +51,30 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 9,
+      "title": "Öl",
+      "category": "QNA",
+      "creationDate": "2023-09-04T10:22:25.499Z",
+      "description": "carlsberg är den bästa ölen",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 10,
+      "title": "hjsa",
+      "category": "QNA",
+      "creationDate": "2023-09-04T10:30:54.782Z",
+      "description": "testar igen",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
