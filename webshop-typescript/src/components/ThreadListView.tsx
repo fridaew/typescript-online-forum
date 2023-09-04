@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ThreadCreationView from './ThreadCreationView'
+import ThreadDetailsView from './ThreadDetailsView';
+import { Link } from 'react-router-dom';
 
 const ThreadListView = () => {
 
-
-  
-  const [data, setData] = useState<Thread[]>([]);
+  const [data, setData] = useState<Thread[]>([])
 
   const fetchData = async () => {
     try {
@@ -22,19 +22,23 @@ const ThreadListView = () => {
     fetchData();
   }, []);
 
-  return <div>
-    
-    <ThreadCreationView setData={setData}/>
-
-    <div className="thread-wrapper d-flex justify-content-center">
-      <div className="card w-75 mb-3">
-        <div className="card-body">
-          <h5 className="card-title">I'm really struggling with TypeScript. Help me, someone.</h5>
-          <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro labore hic quo iure recusandae quam libero fugit, autem tenetur iste ad nisi, quidem corporis tempora beatae ab! Rerum, soluta voluptatum?</p>
-        </div>
+  return (
+    <div>
+      <ThreadCreationView setData={setData}/>
+      <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
+        {data.map(thread => (
+        <Link to={`/thread/${thread.id}`} className="card w-75 mb-3" key={thread.id} title={thread.title}>
+          <div className="card-body">
+            <h5 className="card-title">{thread.title}</h5>
+            <p className="card-text">{thread.description}</p>
+            {/* <ThreadDetailsView title={thread.title} description={thread.description} /> */}
+          </div>
+        </Link>
+        ))}
       </div>
     </div>
-  </div>;
-};
+  ) 
+  
+}
 
 export default ThreadListView;
