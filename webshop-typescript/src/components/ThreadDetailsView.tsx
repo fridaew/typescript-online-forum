@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ThreadCommentsView from './ThreadCommentsView';
 
 interface ThreadDetailsProps {
   title: string;
@@ -11,6 +12,12 @@ interface ThreadDetailsProps {
 const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
+  
+  const [showModal, setShowModal] = useState(false);
+
+  const handleCloseModal = () => setShowModal(false);
+  
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +34,10 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     fetchData();
   }, [id]);
 
+  
+    
+  
+
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
@@ -41,7 +52,8 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <button className='btn btn-primary'>Comment</button>
+     
+      <ThreadCommentsView show={showModal} onHide={handleCloseModal} />
     </div>
   );
 };

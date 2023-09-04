@@ -51,6 +51,18 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 9,
+      "title": "Beer",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:50:41.240Z",
+      "description": "What is your favorite beer?",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
