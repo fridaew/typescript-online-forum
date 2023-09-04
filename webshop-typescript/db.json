@@ -51,6 +51,30 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 7,
+      "title": "gege",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T09:32:58.624Z",
+      "description": "eefefef",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 8,
+      "title": "asking",
+      "category": "QNA",
+      "creationDate": "2023-09-04T09:37:41.565Z",
+      "description": "asking something",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [

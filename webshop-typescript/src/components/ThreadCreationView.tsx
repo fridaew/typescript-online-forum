@@ -104,7 +104,7 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
 
   return (
     <div>
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+      <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
         NEW THREAD
       </button>
 
