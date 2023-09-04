@@ -54,6 +54,12 @@
     },
     {
       "id": 9,
+
+      "title": "Beer",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:50:41.240Z",
+      "description": "What is your favorite beer?",
+
       "title": "Öl",
       "category": "QNA",
       "creationDate": "2023-09-04T10:22:25.499Z",
@@ -82,6 +88,7 @@
       "category": "THREAD",
       "creationDate": "2023-09-04T11:59:47.750Z",
       "description": "Hoppas det.. :D",
+
       "creator": {
         "id": 1,
         "name": "John Doe",

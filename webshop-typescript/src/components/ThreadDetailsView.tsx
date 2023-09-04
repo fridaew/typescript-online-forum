@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ThreadCommentsView from './ThreadCommentsView';
 
 interface ThreadDetailsProps {
   title: string;
@@ -44,7 +45,10 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <button className='btn'>Comment</button>
+
+      {/*<button className='btn'>Comment</button>*/}
+      <ThreadCommentsView />
+
     </div>
   );
 };
