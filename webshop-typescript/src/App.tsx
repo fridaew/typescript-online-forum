@@ -20,7 +20,7 @@ function App() {
           {/* <img src={logo} alt="Beer Logo" /> */}
           <Routes>
             <Route path="/" element={<ThreadListView />} />
-            <Route path="/thread/:id" element={<ThreadDetailsView title='' description='' creator='' category='' />} />
+            <Route path="/thread/:id" element={<ThreadDetailsView title='' description='' category='' creator={{userName: ''}} />} />
           </Routes>
         </div>
       </Router>
