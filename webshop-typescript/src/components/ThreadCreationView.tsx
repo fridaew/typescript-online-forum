@@ -1,32 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-
-
 interface ThreadCreationViewProps {
   setData: React.Dispatch<React.SetStateAction<Thread[]>>; 
 }
 
 function ThreadCreationView( { setData }: ThreadCreationViewProps) {
-
- 
   // const currentUser: User = {
   //   id: 1,
   //   name: 'John Doe',
   //   userName: 'johndoe',
   // };
-
   const currentDate: string = new Date().toISOString();
-
 
   const [user, setUser] = useState<User>({
     id: 1,
     name: 'John Doe',
     userName: 'johndoe',
   });
-
-
 
   const [posts, setPosts] = useState<Thread[]>([]);
   
@@ -95,13 +86,6 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
       });
   }, []);
 
-
-
-
-
-
-  
-
   return (
     <div>
       <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
@@ -150,25 +134,3 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
 }
 
 export default ThreadCreationView;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

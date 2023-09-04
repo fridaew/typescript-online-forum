@@ -1,18 +1,10 @@
 {
   "posts": [
     {
-      "title": "TypeScript course",
-      "category": "Code",
-      "creationDate": "sunday",
-      "description": "TypeScript is really, really fun!",
-      "creator": "Alex",
-      "id": 2
-    },
-    {
       "title": "JS Course",
       "category": "THREAD",
-      "creationDate": "Mondya",
-      "description": "JS is really, really fun!",
+      "creationDate": "Monday",
+      "description": "JS is really fun!",
       "creator": "Krille",
       "id": 3
     },
@@ -87,18 +79,6 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
-    },
-    {
-      "id": 12,
-      "title": "Beer lovers!",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T15:21:55.182Z",
-      "description": "I love beer. But I think it is too expensive. What do you think?",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
     }
   ],
   "comments": [
@@ -106,19 +86,6 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
-    },
-    {
-      "body": "some comments, some comments",
-      "postId": 1,
-      "id": 2
-    },
-    {
-      "body": "some comments, some comments",
-      "postId": 2,
-      "id": 3
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
