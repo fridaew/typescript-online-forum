@@ -30,7 +30,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
-        <div className="card w-75 mb-3">
+        <div className="card w-50 mb-3">
           <div className='card-body'>
             <div className='d-flex justify-content-between'>
             <h5 className="card-title">{threadData.title}</h5>
@@ -41,7 +41,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <button className='btn btn-primary'>Comment</button>
+      <button className='btn'>Comment</button>
     </div>
   );
 };

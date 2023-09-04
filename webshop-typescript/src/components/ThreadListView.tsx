@@ -27,7 +27,7 @@ const ThreadListView = () => {
       <ThreadCreationView setData={setData}/>
       <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
         {data.map(thread => (
-        <Link to={`/thread/${thread.id}`} className="card w-75 mb-3" key={thread.id}>
+        <Link to={`/thread/${thread.id}`} className="card w-50 mb-3" key={thread.id}>
           <div className="card-body">
             <h5 className="card-title">{thread.title}</h5>
             <p className="card-text">{thread.description}</p>
