@@ -78,6 +78,7 @@
     },
     {
       "id": 11,
+<<<<<<< HEAD
       "title": "test",
       "category": "THREAD",
       "creationDate": "2023-09-04T10:40:39.601Z",
@@ -94,6 +95,12 @@
       "category": "THREAD",
       "creationDate": "2023-09-04T11:47:27.029Z",
       "description": "vi testar",
+=======
+      "title": "Funkar det?",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:59:47.750Z",
+      "description": "Hoppas det.. :D",
+>>>>>>> ab5b71e5174b83cdbab61315a6951595518e380d
       "creator": {
         "id": 1,
         "name": "John Doe",
