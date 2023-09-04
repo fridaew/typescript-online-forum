@@ -14,8 +14,8 @@ function App() {
         <div className="App">
           <img src={logo} alt="Beer Logo" />
           <Routes>
-            <Route path="/" Component={ThreadListView} />
-            <Route path="/thread/:id" Component={ThreadDetailsView} />
+            <Route path="/" element={<ThreadListView />} />
+            <Route path="/thread/:id" element={<ThreadDetailsView title='' description='' creator='' category='' />} />
           </Routes>
         </div>
       </Router>
