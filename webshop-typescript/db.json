@@ -75,6 +75,30 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 11,
+      "title": "test",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T10:40:39.601Z",
+      "description": "testar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 12,
+      "title": "test2",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:47:27.029Z",
+      "description": "vi testar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
