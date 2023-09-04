@@ -4,8 +4,10 @@ import { useParams } from 'react-router-dom';
 interface ThreadDetailsProps {
   title: string;
   description: string;
-  creator: string;
   category: string;
+  creator: {
+    userName: string;
+  }
 }
 
 const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
@@ -36,8 +38,9 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
             <h5 className="card-title">{threadData.title}</h5>
             <h5 className='card-title'>{threadData.category}</h5>
             </div>
-            <p className='card-text'>u/{threadData.creator}</p>
+            <p className='card-text'>u/{threadData.creator.userName}</p>
             <p className="card-text">{threadData.description}</p>
+            {/* <p className="card-text">{threadData.description}</p> */}
           </div>
         </div>
       )}

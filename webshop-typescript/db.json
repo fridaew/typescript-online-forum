@@ -75,6 +75,18 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 11,
+      "title": "Funkar det?",
+      "category": "THREAD",
+      "creationDate": "2023-09-04T11:59:47.750Z",
+      "description": "Hoppas det.. :D",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
