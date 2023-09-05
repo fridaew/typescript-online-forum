@@ -15,7 +15,7 @@
     {
       "id": 4,
       "title": "Beer from Danmark. ",
-      "category": "THREAD",
+      "category": "QNA",
       "creationDate": "2023-09-05T12:10:20.585Z",
       "description": "I love Danish beer, do you? NOOOOO!",
       "creator": {
@@ -107,6 +107,14 @@
         "userName": ""
       },
       "id": 15
+    },
+    {
+      "thread": "4",
+      "description": "yes i do!",
+      "creator": {
+        "userName": ""
+      },
+      "id": 16
     }
   ],
   "profile": {
