@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
+import axios from 'axios'
 
 interface ThreadDetailsProps {
+  id: string;
   title: string;
   description: string;
   category: string;
@@ -30,6 +32,18 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     fetchData();
   }, [id]);
 
+
+    const deleteThread = async (id: string) => {
+      try {
+        const res = await axios.delete(`http://localhost:8080/posts/${id}`)
+        console.log(res)
+        setThreadData(null)
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
@@ -43,7 +57,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
             <p className="card-text">{threadData.description}</p>
             <div className="d-flex justify-content-between">
               <ThreadCommentsView />
-              <button className="btn btn-danger" type="button">Delete</button>
+              <button className="btn btn-danger" type="button" onClick={() => deleteThread(threadData.id)}>Delete</button>
             </div>
           </div>
         </div>

@@ -1,98 +1,19 @@
 {
   "posts": [
     {
-      "title": "JS Course",
-      "category": "THREAD",
-      "creationDate": "Monday",
-      "description": "JS is really fun!",
-      "creator": "Krille",
-      "id": 3
+      "title": "TypeScript course",
+      "category": "Code",
+      "creationDate": "sunday",
+      "description": "TypeScript is really, really fun!",
+      "creator": "Alex",
+      "id": 2
     },
     {
       "id": 4,
-      "title": "Help",
+      "title": "beer forum",
       "category": "THREAD",
-      "creationDate": "2023-09-04T09:35:53.511Z",
-      "description": "Help",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 7,
-      "title": "gege",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T09:32:58.624Z",
-      "description": "eefefef",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 8,
-      "title": "asking",
-      "category": "QNA",
-      "creationDate": "2023-09-04T09:37:41.565Z",
-      "description": "asking something",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 9,
-      "title": "Öl",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:22:25.499Z",
-      "description": "carlsberg är den bästa ölen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 10,
-      "title": "hjsa",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:30:54.782Z",
-      "description": "testar igen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 11,
-<<<<<<< HEAD
-      "title": "test",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T10:40:39.601Z",
-      "description": "testar",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 12,
-      "title": "test2",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T11:47:27.029Z",
-      "description": "vi testar",
-=======
-      "title": "Funkar det?",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T11:59:47.750Z",
-      "description": "Hoppas det.. :D",
->>>>>>> ab5b71e5174b83cdbab61315a6951595518e380d
+      "creationDate": "2023-09-05T09:00:29.842Z",
+      "description": "what is it",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -102,19 +23,42 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 2
-    },
-    {
-      "title": "",
-      "description": "",
+      "body": "some comments, some comments",
+      "postId": 2,
       "id": 3
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 4
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 5
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 7
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 8
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 9
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
