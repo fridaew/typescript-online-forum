@@ -1,11 +1,30 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { ThreadDetailsProps } from './ThreadDetailsView';
+import axios from 'axios';
 
-function ThreadCommentsView() {
+interface ThreadCommentsProps {
+  threadData: ThreadDetailsProps | null;
+}
+
+const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
   const [comment, setComment] = useState('');
-  const [comments, setComments] = useState<string[]>([]);
+  const [comments, setComments] = useState<Comment[]>([]);
 
   const { id } = useParams()
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get<Comment[]>(`http://localhost:8080/comments?thread=${id}`);
+        const data = response.data;
+        setComments(data);
+      } catch (error) {
+        console.log('Error fetching comments: ', error);
+      }
+    };
+    fetchComments();
+  }, [id]);
 
   const handleCommentChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(e.target.value);
@@ -13,30 +32,18 @@ function ThreadCommentsView() {
 
   const handleAddComment = async () => {
     try {
-      const response = await fetch('http://localhost:8080/comments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          thread: id,
-          description: comment,
-          creator: {
-            userName: ''
-          }
-        }), // Assuming your JSON server expects 'description' for comments
+      const response = await axios.post<Comment>('http://localhost:8080/comments', {
+        thread: id,
+        content: comment, // Assuming your server expects 'content' for comments
+        creator: threadData?.creator,
       });
 
-      // id: number;
-      // thread: number;
-      // content: string;
-      // creator: User
-
-      if (response.ok) {
+      if (response.status === 201) {
         console.log('Comment added successfully');
+        const newComment: Comment = response.data;
 
         // Update the comments state with the new comment
-        setComments([...comments, comment]);
+        setComments([...comments, newComment]);
 
         // Clear the comment input field after adding
         setComment('');
@@ -110,13 +117,14 @@ function ThreadCommentsView() {
       
       {/* <div className="card w-50-mb-3"></div> */}
       {comments.length > 0 &&
-        comments.map((commentText, index) => (
+        comments.map((commentData, index) => (
           <div className="card w-50 mb-3" key={index}>
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <h5>Comment</h5>
               </div>
-              <div className="card-text border-bottom border-light my-3">{commentText}</div>
+              <div className="card-text border-bottom border-light my-3">{commentData.content}</div>
+              {/* Render other comment properties */}
             </div>
           </div>
         ))}

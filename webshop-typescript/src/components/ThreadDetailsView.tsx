@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
 import axios from 'axios'
 
-interface ThreadDetailsProps {
+export interface ThreadDetailsProps {
   id: string;
   title: string;
   description: string;
@@ -20,16 +20,15 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/posts/${id}`);
-        const data = await response.json();
-        setThreadData(data);
-        console.log(data);
+        const res = await axios.get(`http://localhost:8080/posts/${id}`);
+        setThreadData(res.data);
+        console.log(res.data);
       } catch (error) {
         console.error('Error fetching thread data:', error);
       }
     };
 
-    fetchData();
+    fetchData()
   }, [id]);
 
     const deleteThread = async (id: string) => {
@@ -63,7 +62,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <ThreadCommentsView />
+      <ThreadCommentsView threadData={threadData} />
     </div>
   );
 };

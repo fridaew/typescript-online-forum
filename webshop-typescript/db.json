@@ -1,14 +1,6 @@
 {
   "posts": [
     {
-      "title": "TypeScript course",
-      "category": "Code",
-      "creationDate": "sunday",
-      "description": "TypeScript is really, really fun!",
-      "creator": "Alex",
-      "id": 2
-    },
-    {
       "id": 4,
       "title": "beer forum",
       "category": "THREAD",
@@ -19,21 +11,52 @@
         "name": "John Doe",
         "userName": "johndoe"
       }
+    },
+    {
+      "id": 5,
+      "title": "Thread 3",
+      "category": "THREAD",
+      "creationDate": "2023-09-05T11:48:01.361Z",
+      "description": "Text",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 6,
+      "title": "AMA",
+      "category": "QNA",
+      "creationDate": "2023-09-05T11:49:54.811Z",
+      "description": "Ask me anything!",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "thread": "6",
+      "content": "TEST COMMENT?!",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 8
     },
     {
-      "thread": "2",
-      "description": "comments",
+      "thread": "4",
+      "content": "What type of thread is this?",
       "creator": {
-        "userName": ""
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
       },
-      "id": 2
+      "id": 9
     }
   ]
 }
