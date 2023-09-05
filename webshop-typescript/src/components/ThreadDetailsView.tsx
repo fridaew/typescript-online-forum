@@ -6,7 +6,7 @@ import UpdateThread from './UpdateThread';
 
 import axios from 'axios'
 
-interface ThreadDetailsProps {
+export interface ThreadDetailsProps {
   id: string;
   title: string;
   description: string;
@@ -30,16 +30,15 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/posts/${id}`);
-        const data = await response.json();
-        setThreadData(data);
-        console.log(data);
+        const res = await axios.get(`http://localhost:8080/posts/${id}`);
+        setThreadData(res.data);
+        console.log(res.data);
       } catch (error) {
         console.error('Error fetching thread data:', error);
       }
     };
 
-    fetchData();
+    fetchData()
   }, [id]);
 
 
@@ -58,9 +57,8 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     const test = 'test'
     
   return (
-   
-    <div>
-       <UpdateThread setData={setData}/>
+    <>
+    <UpdateThread setData={setData}/>
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
         <div className="card w-50 mb-3">
@@ -75,26 +73,11 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
               <button className="btn btn-danger" onClick={() => deleteThread(threadData.id)} type="button">Delete</button>
             </div>
           </div>
-         
         </div>
-        
-       
       )}
-       <ThreadCommentsView />
-
-        
-        
-   
-
-       
-       
-   
-     
+      <ThreadCommentsView threadData={threadData} />
     </div>
-   
-    </div>
-
-    
+    </>
   );
 };
 

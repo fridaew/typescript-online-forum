@@ -3,11 +3,6 @@ import ThreadListView from './components/ThreadListView';
 import ThreadDetailsView from './components/ThreadDetailsView';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
-// import Nav from './components/Nav/Nav';
-
-
-
-
 
 function App() {
   return (
