@@ -1,79 +1,19 @@
 {
   "posts": [
     {
-      "title": "JS Course",
-      "category": "THREAD",
-      "creationDate": "Monday",
-      "description": "JS is really fun!",
-      "creator": "Krille",
-      "id": 3
+      "title": "TypeScript course",
+      "category": "Code",
+      "creationDate": "sunday",
+      "description": "TypeScript is really, really fun!",
+      "creator": "Alex",
+      "id": 2
     },
     {
       "id": 4,
-      "title": "Help",
+      "title": "beer forum",
       "category": "THREAD",
-      "creationDate": "2023-09-04T09:35:53.511Z",
-      "description": "Help",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 7,
-      "title": "gege",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T09:32:58.624Z",
-      "description": "eefefef",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 8,
-      "title": "asking",
-      "category": "QNA",
-      "creationDate": "2023-09-04T09:37:41.565Z",
-      "description": "asking something",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 9,
-      "title": "Öl",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:22:25.499Z",
-      "description": "carlsberg är den bästa ölen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 10,
-      "title": "hjsa",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:30:54.782Z",
-      "description": "testar igen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 11,
-      "title": "Funkar det?",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T11:59:47.750Z",
-      "description": "Hoppas det.. :D",
+      "creationDate": "2023-09-05T09:00:29.842Z",
+      "description": "what is it",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -83,18 +23,8 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 2
-    },
-    {
-      "title": "",
-      "description": "",
+      "body": "some comments, some comments",
+      "postId": 2,
       "id": 3
     },
     {
@@ -102,18 +32,43 @@
       "description": "",
       "id": 4
     },
-    [],
     {
-      "description": "Hejsan detta är ett test",
+      "title": "",
+      "description": "",
+      "id": 5
+    },
+    {
+      "title": "",
+      "description": "",
       "id": 6
     },
     {
-      "description": "halloj",
+      "title": "",
+      "description": "",
       "id": 7
     },
     {
-      "description": "hfhfhhf",
+      "title": "",
+      "description": "",
       "id": 8
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 9
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 10
+    },
+    {
+      "title": "",
+      "description": "",
+
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

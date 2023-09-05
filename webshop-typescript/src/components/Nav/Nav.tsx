@@ -10,7 +10,7 @@ const Nav = () => {
     <div className='navbar'>
       <NavLink to='/'><p className='navbar-home'><ImHome/></p></NavLink>  
       <div className="navlogo-container">
-        <img className='navlogo-image' src={NavLogo} />
+        <NavLink to='/'><img className='navlogo-image' src={NavLogo} /></NavLink> 
       </div>
       <p className='nav-menu'><GiHamburgerMenu/></p>
     </div>
