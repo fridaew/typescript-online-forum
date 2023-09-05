@@ -43,8 +43,8 @@ import { useState, ChangeEvent } from 'react';
 
     <div>
     <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
-        NEW COMMENT TO THREAD
-      </button>
+        Comment
+    </button>
 
     <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
