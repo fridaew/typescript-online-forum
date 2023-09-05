@@ -23,9 +23,9 @@
   ],
   "comments": [
     {
-      "body": "some comments, some comments",
-      "postId": 2,
-      "id": 3
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
     },
     {
       "title": "",
@@ -52,14 +52,8 @@
       "description": "",
       "id": 8
     },
-    {},
     {
-      "description": "Yes Its good!",
-      "id": 9
-    },
-    {
-      "description": "Its a forum bout beer! :)",
-      "id": 10
+
     }
   ],
   "profile": {
