@@ -38,8 +38,8 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
         const res = await axios.delete(`http://localhost:8080/posts/${id}`)
         console.log(res)
         setThreadData(null)
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        console.log(err);
       }
 
     }
