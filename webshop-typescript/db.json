@@ -9,11 +9,11 @@
       "id": 2
     },
     {
-      "id": 4,
-      "title": "beer forum",
+      "id": 3,
+      "title": "Beer or Wine?",
       "category": "THREAD",
-      "creationDate": "2023-09-05T09:00:29.842Z",
-      "description": "what is it",
+      "creationDate": "2023-09-05T11:29:47.081Z",
+      "description": "What do you think?",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -22,11 +22,6 @@
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
     {
       "title": "",
       "description": "",
@@ -52,8 +47,54 @@
       "description": "",
       "id": 8
     },
+    {},
     {
-
+      "thread": "4",
+      "description": "A beer forum",
+      "creator": {
+        "userName": ""
+      },
+      "id": 9
+    },
+    {
+      "thread": "3",
+      "description": "hshahshahsa",
+      "creator": {
+        "userName": ""
+      },
+      "id": 10
+    },
+    {
+      "thread": "3",
+      "description": "hghdhgd",
+      "creator": {
+        "userName": ""
+      },
+      "id": 11
+    },
+    {
+      "thread": "3",
+      "description": "djsjfsjfjs",
+      "creator": {
+        "userName": ""
+      },
+      "id": 12
+    },
+    {
+      "thread": "3",
+      "description": "Wine!",
+      "creator": {
+        "userName": ""
+      },
+      "id": 13
+    },
+    {
+      "thread": "3",
+      "description": "Beer, Budwiser",
+      "creator": {
+        "userName": ""
+      },
+      "id": 14
     }
   ],
   "profile": {
