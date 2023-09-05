@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
+import UpdateThread from './UpdateThread';
+
+
 
 interface ThreadDetailsProps {
   title: string;
@@ -11,9 +14,13 @@ interface ThreadDetailsProps {
   }
 }
 
+
+
 const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
+
+  const [data, setData] = useState<Thread[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +38,9 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   }, [id]);
 
   return (
+   
+    <div>
+       <UpdateThread setData={setData}/>
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
         <div className="card w-50 mb-3">
@@ -43,10 +53,25 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
             <p className="card-text">{threadData.description}</p>
           </div>
         </div>
+       
       )}
-      <ThreadCommentsView />
+
+        
+        
+   
+
+          <ThreadCommentsView />
+       
+   
+     
     </div>
+   
+    </div>
+
+    
   );
 };
 
 export default ThreadDetailsView;
+
+

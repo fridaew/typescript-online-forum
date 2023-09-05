@@ -1,10 +1,10 @@
 {
   "posts": [
     {
-      "title": "JS Course",
-      "category": "THREAD",
+      "title": "JS Course2",
+      "category": "QNA",
       "creationDate": "Monday",
-      "description": "JS is really fun!",
+      "description": "JS is really fun!:)))))",
       "creator": "Krille",
       "id": 3
     },
