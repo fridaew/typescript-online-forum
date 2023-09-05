@@ -43,9 +43,6 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
 
     }
 
-
-    const test = 'test'
-    
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
