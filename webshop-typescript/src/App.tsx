@@ -2,7 +2,6 @@ import React from 'react';
 import ThreadListView from './components/ThreadListView';
 import ThreadDetailsView from './components/ThreadDetailsView';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import logo from "./assets/logo.png";
 import Nav from './components/Nav/Nav';
 // import Nav from './components/Nav/Nav';
 
@@ -21,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ThreadListView />} />
 
-            <Route path="/thread/:id" element={<ThreadDetailsView  title='' description='' category='' creator={{userName: ''}} />} />
+            <Route path="/thread/:id" element={<ThreadDetailsView id=''  title='' description='' category='' creator={{userName: ''}} />} />
 
           </Routes>
         </div>

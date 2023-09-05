@@ -1,79 +1,23 @@
 {
   "posts": [
     {
-      "title": "JS Course2",
+      "id": 3,
+      "title": "Beer made in Sweden?",
       "category": "QNA",
-      "creationDate": "Monday",
-      "description": "JS is really fun!:)))))",
-      "creator": "Krille",
-      "id": 3
+      "creationDate": "2023-09-05T12:06:46.831Z",
+      "description": "What brands are made in Sweden?",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     },
     {
       "id": 4,
-      "title": "Help",
+      "title": "Beer from Danmark. ",
       "category": "THREAD",
-      "creationDate": "2023-09-04T09:35:53.511Z",
-      "description": "Help",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 7,
-      "title": "gege",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T09:32:58.624Z",
-      "description": "eefefef",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 8,
-      "title": "asking",
-      "category": "QNA",
-      "creationDate": "2023-09-04T09:37:41.565Z",
-      "description": "asking something",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 9,
-      "title": "Öl",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:22:25.499Z",
-      "description": "carlsberg är den bästa ölen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 10,
-      "title": "hjsa",
-      "category": "QNA",
-      "creationDate": "2023-09-04T10:30:54.782Z",
-      "description": "testar igen",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 11,
-      "title": "Funkar det?",
-      "category": "THREAD",
-      "creationDate": "2023-09-04T11:59:47.750Z",
-      "description": "Hoppas det.. :D",
+      "creationDate": "2023-09-05T12:10:20.585Z",
+      "description": "I love Danish beer, do you?",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -83,9 +27,89 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "",
+      "description": "",
+      "id": 4
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 5
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 7
+    },
+    {
+      "title": "",
+      "description": "",
+      "id": 8
+    },
+    {},
+    {
+      "thread": "4",
+      "description": "A beer forum",
+      "creator": {
+        "userName": ""
+      },
+      "id": 9
+    },
+    {
+      "thread": "3",
+      "description": "hshahshahsa",
+      "creator": {
+        "userName": ""
+      },
+      "id": 10
+    },
+    {
+      "thread": "3",
+      "description": "hghdhgd",
+      "creator": {
+        "userName": ""
+      },
+      "id": 11
+    },
+    {
+      "thread": "3",
+      "description": "djsjfsjfjs",
+      "creator": {
+        "userName": ""
+      },
+      "id": 12
+    },
+    {
+      "thread": "3",
+      "description": "Wine!",
+      "creator": {
+        "userName": ""
+      },
+      "id": 13
+    },
+    {
+      "thread": "3",
+      "description": "Beer, Budwiser",
+      "creator": {
+        "userName": ""
+      },
+      "id": 14
+    },
+    {
+      "thread": "4",
+      "description": "I dont know? What kind of beer? ",
+      "creator": {
+        "userName": ""
+      },
+      "id": 15
     }
-  ]
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
