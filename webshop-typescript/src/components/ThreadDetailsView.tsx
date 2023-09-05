@@ -22,6 +22,9 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
 
+
+
+
   const [data, setData] = useState<Thread[]>([])
 
   useEffect(() => {
@@ -38,6 +41,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
 
     fetchData();
   }, [id]);
+
 
     const deleteThread = async (id: string) => {
       try {
@@ -71,15 +75,18 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
               <button className="btn btn-danger" onClick={() => deleteThread(threadData.id)} type="button">Delete</button>
             </div>
           </div>
+         
         </div>
+        
        
       )}
+       <ThreadCommentsView />
 
         
         
    
 
-          <ThreadCommentsView />
+       
        
    
      

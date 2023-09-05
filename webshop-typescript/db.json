@@ -3,7 +3,7 @@
     {
       "id": 3,
       "title": "Beer made in Sweden?",
-      "category": "QNA",
+      "category": "THREAD",
       "creationDate": "2023-09-05T12:06:46.831Z",
       "description": "What brands are made in Sweden?",
       "creator": {
@@ -17,7 +17,7 @@
       "title": "Beer from Danmark. ",
       "category": "THREAD",
       "creationDate": "2023-09-05T12:10:20.585Z",
-      "description": "I love Danish beer, do you?",
+      "description": "I love Danish beer, do you? NOOOOO!",
       "creator": {
         "id": 1,
         "name": "John Doe",
