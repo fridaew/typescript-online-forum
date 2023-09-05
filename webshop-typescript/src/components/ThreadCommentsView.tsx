@@ -95,7 +95,7 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 CANCEL
               </button>
-              <button type="button" className="btn btn-primary" onClick={handleAddComment}>
+              <button type="button" className="btn btn-primary" onClick={handleAddComment} data-bs-dismiss="modal">
                 COMMENT{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
