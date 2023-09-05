@@ -41,10 +41,13 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
             </div>
             <p className='card-text'>u/{threadData.creator.userName}</p>
             <p className="card-text">{threadData.description}</p>
+            <div className="d-flex justify-content-between">
+              <ThreadCommentsView />
+              <button className="btn btn-danger" type="button">Delete</button>
+            </div>
           </div>
         </div>
       )}
-      <ThreadCommentsView />
     </div>
   );
 };
