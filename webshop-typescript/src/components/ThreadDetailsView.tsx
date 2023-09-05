@@ -32,7 +32,6 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     fetchData();
   }, [id]);
 
-
     const deleteThread = async (id: string) => {
       try {
         const res = await axios.delete(`http://localhost:8080/posts/${id}`)
@@ -44,6 +43,9 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
 
     }
 
+
+    const test = 'test'
+    
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
