@@ -1,8 +1,11 @@
 import React, { useState, ChangeEvent } from 'react';
+import { useParams } from 'react-router-dom';
 
 function ThreadCommentsView() {
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState<string[]>([]);
+
+  const { id } = useParams()
 
   const handleCommentChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setComment(e.target.value);
@@ -15,8 +18,19 @@ function ThreadCommentsView() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ description: comment }), // Assuming your JSON server expects 'description' for comments
+        body: JSON.stringify({
+          thread: id,
+          description: comment,
+          creator: {
+            userName: ''
+          }
+        }), // Assuming your JSON server expects 'description' for comments
       });
+
+      // id: number;
+      // thread: number;
+      // content: string;
+      // creator: User
 
       if (response.ok) {
         console.log('Comment added successfully');
@@ -35,10 +49,10 @@ function ThreadCommentsView() {
   };
 
   return (
-    <div>
+    <>
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn btn-primary btn-comment"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         data-bs-whatever="@mdo"
@@ -93,22 +107,20 @@ function ThreadCommentsView() {
           </div>
         </div>
       </div>
-
-      {comments.length > 0 && (
-        <div className="card w-50 mb-3">
-          <div className="card-body">
-            <div className="d-flex justify-content-between">
-              <h5>Comments</h5>
-            </div>
-            {comments.map((commentText, index) => (
-              <div className="card-text border-bottom border-light my-3" key={index}>
-                {commentText}
+      
+      {/* <div className="card w-50-mb-3"></div> */}
+      {comments.length > 0 &&
+        comments.map((commentText, index) => (
+          <div className="card w-50 mb-3" key={index}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between">
+                <h5>Comment</h5>
               </div>
-            ))}
+              <div className="card-text border-bottom border-light my-3">{commentText}</div>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        ))}
+    </>
   );
 }
 

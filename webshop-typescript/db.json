@@ -83,37 +83,17 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "title": "",
-      "description": "",
+      "description": "FUNKA",
+      "number": "3",
       "id": 2
     },
     {
-      "title": "",
-      "description": "",
+      "thread": "3",
+      "description": "Comment",
+      "creator": {
+        "userName": "Alex"
+      },
       "id": 3
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 4
-    },
-    [],
-    {
-      "description": "Hejsan detta är ett test",
-      "id": 6
-    },
-    {
-      "description": "halloj",
-      "id": 7
-    },
-    {
-      "description": "hfhfhhf",
-      "id": 8
     }
   ]
 }

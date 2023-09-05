@@ -30,6 +30,8 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     fetchData();
   }, [id]);
 
+
+
   return (
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
@@ -40,14 +42,14 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
               <h5 className='card-title'>{threadData.category}</h5>
             </div>
             <p className='card-text'>u/{threadData.creator.userName}</p>
-            <p className="card-text">{threadData.description}</p>
             <div className="d-flex justify-content-between">
-              <ThreadCommentsView />
+            <p className="card-text">{threadData.description}</p>
               <button className="btn btn-danger" type="button">Delete</button>
             </div>
           </div>
         </div>
       )}
+      <ThreadCommentsView />
     </div>
   );
 };
