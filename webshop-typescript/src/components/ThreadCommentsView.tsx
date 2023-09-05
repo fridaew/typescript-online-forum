@@ -94,20 +94,17 @@ function ThreadCommentsView() {
         </div>
       </div>
 
-      {comments.length > 0 && (
-        <div className="card w-50 mb-3">
-          <div className="card-body">
-            <div className="d-flex justify-content-between">
-              <h5>Comments</h5>
-            </div>
-            {comments.map((commentText, index) => (
-              <div className="card-text border-bottom border-light my-3" key={index}>
-                {commentText}
+      {comments.length > 0 &&
+        comments.map((commentText, index) => (
+          <div className="card w-50 mb-3" key={index}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between">
+                <h5>Comment</h5>
               </div>
-            ))}
+              <div className="card-text border-bottom border-light my-3">{commentText}</div>
+            </div>
           </div>
-        </div>
-      )}
+        ))}
     </div>
   );
 }
