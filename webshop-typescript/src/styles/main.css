@@ -1,5 +1,11 @@
 .card {
   cursor: pointer;
+  text-decoration: none;
+}
+
+.card-text.thread-description {
+  max-height: 3rem;
+  overflow: hidden;
 }
 
 img {
@@ -7,16 +13,10 @@ img {
   object-fit: contain;
 }
 
-.btn {
+.primary {
   background-color: #2B4762;
 }
 
-.thread-btn{
-  margin-top: 30px;
-  margin-left: 1rem;
-
-}
-.btn:hover {
-
-  background-color: hsl(209, 39%, 48%);
+.primary:hover {
+  background-color: hsl(209, 39%, 23%);
 }

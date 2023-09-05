@@ -29,8 +29,11 @@ const ThreadListView = () => {
         {data.map(thread => (
         <Link to={`/thread/${thread.id}`} className="card w-50 mb-3" key={thread.id}>
           <div className="card-body">
-            <h5 className="card-title">{thread.title}</h5>
-            <p className="card-text">{thread.description}</p>
+            <div className='d-flex justify-content-between'>
+              <h5 className="card-title">{thread.title}</h5>
+              <h5 className='card-title'>{thread.category}</h5>
+            </div>
+            <p className="card-text thread-description">{thread.description}</p>
           </div>
         </Link>
         ))}
