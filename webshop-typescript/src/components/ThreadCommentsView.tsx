@@ -55,6 +55,25 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
     }
   };
 
+  const handleDeleteComment = async (commentId: number) => {
+    try {
+      const response = await axios.delete(`http://localhost:8080/comments/${commentId}`);
+      
+      if (response.status === 200) {
+        console.log('Comment deleted successfully');
+        // Remove the deleted comment from the comments state
+        const updatedComments = comments.filter(comment => comment.id !== commentId);
+        setComments(updatedComments);
+      } else {
+        console.error('Error deleting comment. Server response:', response);
+      }
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+    }
+  };
+
+
+
   return (
     <>
       <button
@@ -122,6 +141,13 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <h5>Comment</h5>
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => handleDeleteComment(commentData.id)}
+                >
+                  Delete
+                </button>
               </div>
               <div className="card-text border-bottom border-light my-3">{commentData.content}</div>
               {/* Render other comment properties */}

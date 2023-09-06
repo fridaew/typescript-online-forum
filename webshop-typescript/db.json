@@ -53,26 +53,6 @@
   "comments": [
     {
       "thread": "1",
-      "content": "kommentar",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "id": 1
-    },
-    {
-      "thread": "1",
-      "content": "en till kommenatar",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "id": 2
-    },
-    {
-      "thread": "1",
       "content": "hejsna",
       "creator": {
         "id": 1,
@@ -110,16 +90,6 @@
         "userName": "johndoe"
       },
       "id": 6
-    },
-    {
-      "thread": "4",
-      "content": "dddd",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "id": 7
     }
   ]
 }
