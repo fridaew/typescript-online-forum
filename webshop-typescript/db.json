@@ -1,4 +1,40 @@
 {
-  "posts": [],
-  "comments": []
+  "posts": [
+    {
+      "id": 1,
+      "title": "erere",
+      "category": "THREAD",
+      "creationDate": "2023-09-06T08:08:49.484Z",
+      "description": "erer",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 2,
+      "title": "hej",
+      "category": "THREAD",
+      "creationDate": "2023-09-06T08:15:47.873Z",
+      "description": "hej",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "thread": "1",
+      "content": "hejsan",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 1
+    }
+  ]
 }
