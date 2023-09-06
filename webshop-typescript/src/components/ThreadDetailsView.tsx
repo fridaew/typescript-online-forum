@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
+import UpdateThread from './UpdateThread';
+
+
 import axios from 'axios'
 
-interface ThreadDetailsProps {
+export interface ThreadDetailsProps {
   id: string;
   title: string;
   description: string;
@@ -13,24 +16,34 @@ interface ThreadDetailsProps {
   }
 }
 
+
+
 const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
 
+
+
+
+  const [data, setData] = useState<Thread[]>([])
+  const [comments, setComments] = useState<Comment[]>([]);
+  console.log(comments);
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/posts/${id}`);
-        const data = await response.json();
-        setThreadData(data);
-        console.log(data);
+        const res = await axios.get(`http://localhost:8080/posts/${id}`);
+        setThreadData(res.data);
+        console.log(res.data);
       } catch (error) {
         console.error('Error fetching thread data:', error);
       }
     };
 
-    fetchData();
+    fetchData()
   }, [id]);
+
 
     const deleteThread = async (id: string) => {
       try {
@@ -45,6 +58,8 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
     }
 
   return (
+    <>
+    <UpdateThread setData={setData}/>
     <div className="thread-wrapper d-flex justify-content-center align-items-center flex-column my-3">
       {threadData && (
         <div className="card w-50 mb-3">
@@ -61,9 +76,12 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <ThreadCommentsView  />
+      <ThreadCommentsView threadData={threadData} />
     </div>
+    </>
   );
 };
 
 export default ThreadDetailsView;
+
+

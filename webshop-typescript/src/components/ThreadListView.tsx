@@ -4,6 +4,7 @@ import ThreadCreationView from './ThreadCreationView'
 import ThreadDetailsView from './ThreadDetailsView';
 import { Link } from 'react-router-dom';
 
+
 const ThreadListView = () => {
 
   const [data, setData] = useState<Thread[]>([])
@@ -38,7 +39,10 @@ const ThreadListView = () => {
         </Link>
         ))}
       </div>
+   
     </div>
+
+
   ) 
   
 }

@@ -1,114 +1,48 @@
 {
-  "posts": [],
-  "comments": [
+  "posts": [
     {
-      "title": "",
-      "description": "",
-      "id": 4
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 5
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 6
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 7
-    },
-    {
-      "title": "",
-      "description": "",
-      "id": 8
-    },
-    {},
-    {
-      "description": "comment",
-      "id": 9
-    },
-    {
-      "description": "hej",
-      "id": 10
-    },
-    {
-      "description": "n",
-      "id": 11
-    },
-    {
-      "description": "hej",
-      "id": 12
-    },
-    {
-      "thread": "4",
-      "description": "hej",
+      "id": 2,
+      "title": "öl",
+      "category": "THREAD",
+      "creationDate": "2023-09-06T08:02:33.250Z",
+      "description": "öl test",
       "creator": {
-        "userName": ""
-      },
-      "id": 13
-    },
-    {
-      "thread": "3",
-      "description": "hej",
-      "creator": {
-        "userName": ""
-      },
-      "id": 14
-    },
-    {
-      "thread": "3",
-      "description": "hej då\n",
-      "creator": {
-        "userName": ""
-      },
-      "id": 15
-    },
-    {
-      "thread": "3",
-      "description": "okej",
-      "creator": {
-        "userName": ""
-      },
-      "id": 16
-    },
-    {
-      "thread": "2",
-      "description": "hej",
-      "creator": {
-        "userName": ""
-      },
-      "id": 17
-    },
-    {
-      "thread": "2",
-      "description": "ccc",
-      "creator": {
-        "userName": ""
-      },
-      "id": 18
-    },
-    {
-      "thread": "2",
-      "description": "hej",
-      "creator": {
-        "userName": ""
-      },
-      "id": 19
-    },
-    {
-      "thread": "2",
-      "description": "hej",
-      "creator": {
-        "userName": ""
-      },
-      "id": 20
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "comments": [
+    {
+      "thread": "1",
+      "content": "comment",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 1
+    },
+    {
+      "thread": "1",
+      "content": "hej då",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 2
+    },
+    {
+      "thread": "2",
+      "content": "öllllllll",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 3
+    }
+  ]
 }
