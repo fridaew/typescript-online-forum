@@ -2,10 +2,47 @@
   "posts": [
     {
       "id": 1,
-      "title": "Provar",
+      "title": "CarlsBerg",
       "category": "QNA",
       "creationDate": "2023-09-05T13:25:01.678Z",
-      "description": "Testrae",
+      "description": "Är det din favvo eller???",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "isAnswered": true
+    },
+    {
+      "id": 2,
+      "title": "Öl ",
+      "category": "THREAD",
+      "creationDate": "2023-09-05T14:27:26.836Z",
+      "description": "Olika sorters öl, gillar att blanda",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 3,
+      "title": "provar1",
+      "category": "QNA",
+      "creationDate": "2023-09-05T15:12:18.493Z",
+      "description": "hejsan",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 4,
+      "title": "hejsan",
+      "category": "QNA",
+      "creationDate": "2023-09-05T15:36:12.612Z",
+      "description": "ffwff",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -23,6 +60,66 @@
         "userName": "johndoe"
       },
       "id": 1
+    },
+    {
+      "thread": "1",
+      "content": "en till kommenatar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 2
+    },
+    {
+      "thread": "1",
+      "content": "hejsna",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 3
+    },
+    {
+      "thread": "1",
+      "content": "prova",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 4
+    },
+    {
+      "thread": "3",
+      "content": "provar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 5
+    },
+    {
+      "thread": "3",
+      "content": "prova",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 6
+    },
+    {
+      "thread": "4",
+      "content": "dddd",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 7
     }
   ]
 }
