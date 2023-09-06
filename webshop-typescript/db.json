@@ -1,19 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "CarlsBerg",
-      "category": "QNA",
-      "creationDate": "2023-09-05T13:25:01.678Z",
-      "description": "Är det din favvo eller???",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "isAnswered": true
-    },
-    {
       "id": 2,
       "title": "Öl ",
       "category": "THREAD",
@@ -51,26 +38,6 @@
     }
   ],
   "comments": [
-    {
-      "thread": "1",
-      "content": "hejsna",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "id": 3
-    },
-    {
-      "thread": "1",
-      "content": "prova",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      },
-      "id": 4
-    },
     {
       "thread": "3",
       "content": "provar",
