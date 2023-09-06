@@ -37,6 +37,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
         const res = await axios.delete(`http://localhost:8080/posts/${id}`)
         console.log(res)
         setThreadData(null)
+        
       } catch (err) {
         console.log(err);
       }
@@ -53,14 +54,14 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
               <h5 className='card-title'>{threadData.category}</h5>
             </div>
             <p className='card-text'>u/{threadData.creator.userName}</p>
-            <p className="card-text">{threadData.description}</p>
             <div className="d-flex justify-content-between">
-              <ThreadCommentsView />
-              <button className="btn btn-danger" type="button" onClick={() => deleteThread(threadData.id)}>Delete</button>
+            <p className="card-text">{threadData.description}</p>
+              <button className="btn btn-danger" onClick={() => deleteThread(threadData.id)} type="button">Delete</button>
             </div>
           </div>
         </div>
       )}
+      <ThreadCommentsView  />
     </div>
   );
 };

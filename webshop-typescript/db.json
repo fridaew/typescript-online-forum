@@ -1,32 +1,6 @@
 {
-  "posts": [
-    {
-      "title": "TypeScript course",
-      "category": "Code",
-      "creationDate": "sunday",
-      "description": "TypeScript is really, really fun!",
-      "creator": "Alex",
-      "id": 2
-    },
-    {
-      "id": 4,
-      "title": "beer forum",
-      "category": "THREAD",
-      "creationDate": "2023-09-05T09:00:29.842Z",
-      "description": "what is it",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    }
-  ],
+  "posts": [],
   "comments": [
-    {
-      "body": "some comments, some comments",
-      "postId": 2,
-      "id": 3
-    },
     {
       "title": "",
       "description": "",
@@ -68,6 +42,70 @@
     {
       "description": "hej",
       "id": 12
+    },
+    {
+      "thread": "4",
+      "description": "hej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 13
+    },
+    {
+      "thread": "3",
+      "description": "hej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 14
+    },
+    {
+      "thread": "3",
+      "description": "hej då\n",
+      "creator": {
+        "userName": ""
+      },
+      "id": 15
+    },
+    {
+      "thread": "3",
+      "description": "okej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 16
+    },
+    {
+      "thread": "2",
+      "description": "hej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 17
+    },
+    {
+      "thread": "2",
+      "description": "ccc",
+      "creator": {
+        "userName": ""
+      },
+      "id": 18
+    },
+    {
+      "thread": "2",
+      "description": "hej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 19
+    },
+    {
+      "thread": "2",
+      "description": "hej",
+      "creator": {
+        "userName": ""
+      },
+      "id": 20
     }
   ],
   "profile": {
