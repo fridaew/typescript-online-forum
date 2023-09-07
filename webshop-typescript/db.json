@@ -1,5 +1,4 @@
 {
-
   "posts": [
     {
       "id": 2,
@@ -14,23 +13,11 @@
       }
     },
     {
-      "id": 3,
-      "title": "provar1",
-      "category": "QNA",
-      "creationDate": "2023-09-05T15:12:18.493Z",
-      "description": "hejsan",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
-      "id": 4,
-      "title": "hejsan",
-      "category": "QNA",
-      "creationDate": "2023-09-05T15:36:12.612Z",
-      "description": "ffwff",
+      "id": 5,
+      "title": "Öl ",
+      "category": "THREAD",
+      "creationDate": "2023-09-07T13:26:12.876Z",
+      "description": "Gillar öl",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -58,7 +45,26 @@
         "userName": "johndoe"
       },
       "id": 6
+    },
+    {
+      "thread": "7",
+      "content": "ddssd",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 7
+    },
+    {
+      "thread": "5",
+      "content": "Jo jag gillar ändå IPA",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 8
     }
   ]
-
 }

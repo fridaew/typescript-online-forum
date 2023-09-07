@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Navigate, useParams, useNavigate } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import axios from 'axios';
 
 interface ThreadCreationViewProps2 {
@@ -11,6 +11,7 @@ interface ThreadCreationViewProps2 {
 const UpdateThread = ({setData}: ThreadCreationViewProps2) => {
 
   const { id } = useParams();
+  
 
 const [threadData, setThreadData] = useState({
   title: '',
@@ -55,9 +56,6 @@ const [threadData, setThreadData] = useState({
 
 
   const updateThread2 = async () => {
-
-
-    console.log('updateThread2 called');
   try {
     const response = await axios.put(`http://localhost:8080/posts/${id}`, threadData, {
       headers: {
