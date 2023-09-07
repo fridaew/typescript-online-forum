@@ -1,15 +1,16 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ThreadDetailsProps } from './ThreadDetailsView';
 import axios from 'axios';
 
 interface ThreadCommentsProps {
-  threadData: ThreadDetailsProps | null;
+  threadData: Thread | null;
+  comments: Comment[]
+  setComments: React.Dispatch<React.SetStateAction<Comment[]>>
 }
 
-const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
+const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData , comments , setComments}) => {
   const [comment, setComment] = useState('');
-  const [comments, setComments] = useState<Comment[]>([]);
+  // const [comments, setComments] = useState<Comment[]>([]);
 
   const { id } = useParams()
 
@@ -144,7 +145,7 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
                 <button
                   type="button"
                   className="btn btn-danger"
-                  onClick={() => handleDeleteComment(commentData.id)}
+                  onClick={() => handleDeleteComment(commentData.id) }
                 >
                   Delete
                 </button>
