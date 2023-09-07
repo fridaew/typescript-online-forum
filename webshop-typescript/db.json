@@ -1,4 +1,64 @@
 {
-  "posts": [],
-  "comments": []
+
+  "posts": [
+    {
+      "id": 2,
+      "title": "Öl ",
+      "category": "THREAD",
+      "creationDate": "2023-09-05T14:27:26.836Z",
+      "description": "Olika sorters öl, gillar att blanda",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 3,
+      "title": "provar1",
+      "category": "QNA",
+      "creationDate": "2023-09-05T15:12:18.493Z",
+      "description": "hejsan",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 4,
+      "title": "hejsan",
+      "category": "QNA",
+      "creationDate": "2023-09-05T15:36:12.612Z",
+      "description": "ffwff",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "thread": "3",
+      "content": "provar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 5
+    },
+    {
+      "thread": "3",
+      "content": "prova",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 6
+    }
+  ]
+
 }
