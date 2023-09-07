@@ -15,8 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ThreadListView />} />
 
-            <Route path="/thread/:id" element={<ThreadDetailsView id=''  title='' description='' category='' creator={{userName: ''}} />} />
-
+            <Route path="/thread/:id" element={<ThreadDetailsView />} />
           </Routes>
         </div>
       </Router>

@@ -1,16 +1,16 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ThreadDetailsProps } from './ThreadDetailsView';
 import axios from 'axios';
 
 interface ThreadCommentsProps {
-  threadData: ThreadDetailsProps | null;
+  threadData: Thread | null;
+  comments: Comment[]
+  setComments: React.Dispatch<React.SetStateAction<Comment[]>>
 }
 
-const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
+const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData , comments , setComments}) => {
   const [comment, setComment] = useState('');
-  const [comments, setComments] = useState<Comment[]>([]);
-  // console.log(comments);
+  // const [comments, setComments] = useState<Comment[]>([]);
 
   const { id } = useParams()
 
@@ -56,16 +56,24 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
     }
   };
 
-  // const deleteComment = async (id: string) => {
-  //   try {
-  //     const res = await axios.delete(`http://localhost:8080/posts/${id}`)
-  //     console.log(res)
+  const handleDeleteComment = async (commentId: number) => {
+    try {
+      const response = await axios.delete(`http://localhost:8080/comments/${commentId}`);
       
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
+      if (response.status === 200) {
+        console.log('Comment deleted successfully');
+        // Remove the deleted comment from the comments state
+        const updatedComments = comments.filter(comment => comment.id !== commentId);
+        setComments(updatedComments);
+      } else {
+        console.error('Error deleting comment. Server response:', response);
+      }
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+    }
+  };
 
-  // }
+
 
   return (
     <>
@@ -134,12 +142,17 @@ const ThreadCommentsView: React.FC<ThreadCommentsProps> = ({ threadData }) => {
             <div className="card-body">
               <div className="d-flex justify-content-between">
                 <h5>Comment</h5>
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => handleDeleteComment(commentData.id) }
+                >
+                  Delete
+                </button>
               </div>
               <div className="card-text border-bottom border-light my-3">{commentData.content}</div>
               {/* Render other comment properties */}
             </div>
-            {/* <button className='btn btn-danger' onClick={() => deleteComment(comment)}>Delete</button> */}
-            {/* <ThreadDetailsView comments={comments}}/> */}
           </div>
         ))}
     </>

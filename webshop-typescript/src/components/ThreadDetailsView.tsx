@@ -2,30 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
 import UpdateThread from './UpdateThread';
-
-
 import axios from 'axios'
 
-export interface ThreadDetailsProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  creator: {
-    userName: string;
-  }
-}
 
-
-
-const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
+const ThreadDetailsView  = () => {
   const { id } = useParams();
-  const [threadData, setThreadData] = useState<ThreadDetailsProps | null>(null);
-
-
-
+  const [threadData, setThreadData] = useState<Thread | null>(null);
 
   const [data, setData] = useState<Thread[]>([])
+
   const [comments, setComments] = useState<Comment[]>([]);
   console.log(comments);
 
@@ -45,17 +30,36 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
   }, [id]);
 
 
-    const deleteThread = async (id: string) => {
-      try {
-        const res = await axios.delete(`http://localhost:8080/posts/${id}`)
-        console.log(res)
-        setThreadData(null)
-        
-      } catch (err) {
-        console.log(err);
+  const handleDeleteComment = async (commentId: number) => {
+    try {
+      const response = await axios.delete(`http://localhost:8080/comments/${commentId}`);
+  
+      if (response.status === 200) {
+        console.log('Comment deleted successfully');
+        // Remove the deleted comment from the comments state
+        const updatedComments = comments.filter(comment => comment.id !== commentId);
+        setComments(updatedComments);
+      } else {
+        console.error('Error deleting comment. Server response:', response);
       }
-
+    } catch (error) {
+      console.error('Error deleting comment:', error);
     }
+  };
+  
+  
+  const deleteThread = async (id: number) => {
+    try {
+      const res = await axios.delete(`http://localhost:8080/posts/${id}`)
+      console.log(res)
+      setThreadData(null)
+      // handleDeleteComment(id)
+      setComments([])
+  
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <>
@@ -76,7 +80,7 @@ const ThreadDetailsView: React.FC<ThreadDetailsProps> = () => {
           </div>
         </div>
       )}
-      <ThreadCommentsView threadData={threadData} />
+      <ThreadCommentsView threadData={threadData} setComments={setComments} comments={comments} />
     </div>
     </>
   );
