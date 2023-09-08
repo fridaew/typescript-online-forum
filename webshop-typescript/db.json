@@ -1,4 +1,17 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": 1,
+      "title": "hej",
+      "category": "THREAD",
+      "creationDate": "2023-09-08T07:28:07.689Z",
+      "description": "hej",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    }
+  ],
   "comments": []
 }
