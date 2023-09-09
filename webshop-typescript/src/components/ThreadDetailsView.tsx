@@ -29,32 +29,14 @@ const ThreadDetailsView  = () => {
     fetchData()
   }, [id]);
 
-
-  const handleDeleteComment = async (commentId: number) => {
-    try {
-      const response = await axios.delete(`http://localhost:8080/comments/${commentId}`);
-  
-      if (response.status === 200) {
-        console.log('Comment deleted successfully');
-        // Remove the deleted comment from the comments state
-        const updatedComments = comments.filter(comment => comment.id !== commentId);
-        setComments(updatedComments);
-      } else {
-        console.error('Error deleting comment. Server response:', response);
-      }
-    } catch (error) {
-      console.error('Error deleting comment:', error);
-    }
-  };
-  
   
   const deleteThread = async (id: number) => {
     try {
       const res = await axios.delete(`http://localhost:8080/posts/${id}`)
       console.log(res)
       setThreadData(null)
-      // handleDeleteComment(id)
       setComments([])
+      
   
     } catch (err) {
       console.log(err);
@@ -87,5 +69,11 @@ const ThreadDetailsView  = () => {
 };
 
 export default ThreadDetailsView;
+
+
+
+
+
+
 
 

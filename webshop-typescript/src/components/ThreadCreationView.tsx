@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-
-
 interface ThreadCreationViewProps {
   setData: React.Dispatch<React.SetStateAction<Thread[]>>; 
 }
 
 function ThreadCreationView( { setData }: ThreadCreationViewProps) {
 
- 
-  // const currentUser: User = {
-  //   id: 1,
-  //   name: 'John Doe',
-  //   userName: 'johndoe',
-  // };
-
   const currentDate: string = new Date().toISOString();
+
 
 
   const [user, setUser] = useState<User>({
@@ -25,10 +16,6 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
     name: 'John Doe',
     userName: 'johndoe',
   });
-
-
-
-  const [posts, setPosts] = useState<Thread[]>([]);
   
   const [formData, setFormData] = useState<Thread>
   ({
@@ -56,7 +43,7 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
   };
 
   const createPost = () => {
-    // Make a POST request to save the new thread on the server
+    // POST request to save the new thread on the server
     axios
       .post('http://localhost:8080/posts', formData)
       .then((response) => {
@@ -82,26 +69,6 @@ function ThreadCreationView( { setData }: ThreadCreationViewProps) {
         console.error('Error creating thread:', error);
       });
   };
-//
-  useEffect(() => {
-    axios
-      .get('http://localhost:8080/posts')
-      .then((response) => {
-        const fetchedThreads = response.data;
-        setPosts(fetchedThreads);
-      })
-      .catch((error) => {
-        console.error('Error fetching threads:', error);
-      });
-  }, []);
-
-
-
-
-
-
-  
-
   return (
     <div>
       <div className='thread-btn'>  <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">

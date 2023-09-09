@@ -1,11 +1,23 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "hej",
+      "id": 2,
+      "title": "Öl ",
       "category": "THREAD",
-      "creationDate": "2023-09-08T07:28:07.689Z",
-      "description": "hej",
+      "creationDate": "2023-09-05T14:27:26.836Z",
+      "description": "Olika sorters öl, gillar att blanda",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Öl ",
+      "category": "THREAD",
+      "creationDate": "2023-09-07T13:26:12.876Z",
+      "description": "Gillar öl",
       "creator": {
         "id": 1,
         "name": "John Doe",
@@ -13,5 +25,46 @@
       }
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "thread": "3",
+      "content": "provar",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 5
+    },
+    {
+      "thread": "3",
+      "content": "prova",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 6
+    },
+    {
+      "thread": "7",
+      "content": "ddssd",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 7
+    },
+    {
+      "thread": "5",
+      "content": "Jo jag gillar ändå IPA",
+      "creator": {
+        "id": 1,
+        "name": "John Doe",
+        "userName": "johndoe"
+      },
+      "id": 8
+    }
+  ]
 }
