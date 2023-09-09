@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "id": 2,
-      "title": "Öl ",
-      "category": "THREAD",
-      "creationDate": "2023-09-05T14:27:26.836Z",
-      "description": "Olika sorters öl, gillar att blanda",
-      "creator": {
-        "id": 1,
-        "name": "John Doe",
-        "userName": "johndoe"
-      }
-    },
-    {
       "id": 5,
       "title": "Öl ",
       "category": "THREAD",

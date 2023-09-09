@@ -3,11 +3,14 @@ import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
 import UpdateThread from './UpdateThread';
 import axios from 'axios'
+import {Navigate, useNavigate} from 'react-router-dom'
 
 
 const ThreadDetailsView  = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<Thread | null>(null);
+  const navigate = useNavigate()
+
 
   const [data, setData] = useState<Thread[]>([])
 
@@ -36,6 +39,7 @@ const ThreadDetailsView  = () => {
       console.log(res)
       setThreadData(null)
       setComments([])
+      navigate('/')
       
   
     } catch (err) {
