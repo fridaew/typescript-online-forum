@@ -3,11 +3,14 @@ import { useParams } from 'react-router-dom';
 import ThreadCommentsView from './ThreadCommentsView';
 import UpdateThread from './UpdateThread';
 import axios from 'axios'
+import {Navigate, useNavigate} from 'react-router-dom'
 
 
 const ThreadDetailsView  = () => {
   const { id } = useParams();
   const [threadData, setThreadData] = useState<Thread | null>(null);
+  const navigate = useNavigate()
+
 
   const [data, setData] = useState<Thread[]>([])
 
@@ -29,32 +32,15 @@ const ThreadDetailsView  = () => {
     fetchData()
   }, [id]);
 
-
-  // const handleDeleteComment = async (commentId: number) => {
-  //   try {
-  //     const response = await axios.delete(`http://localhost:8080/comments/${commentId}`);
-  
-  //     if (response.status === 200) {
-  //       console.log('Comment deleted successfully');
-  //       // Remove the deleted comment from the comments state
-  //       const updatedComments = comments.filter(comment => comment.id !== commentId);
-  //       setComments(updatedComments);
-  //     } else {
-  //       console.error('Error deleting comment. Server response:', response);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error deleting comment:', error);
-  //   }
-  // };
-  
   
   const deleteThread = async (id: number) => {
     try {
       const res = await axios.delete(`http://localhost:8080/posts/${id}`)
       console.log(res)
       setThreadData(null)
-      // handleDeleteComment(id)
       setComments([])
+      navigate('/')
+      
   
     } catch (err) {
       console.log(err);
